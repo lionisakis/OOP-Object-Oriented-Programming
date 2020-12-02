@@ -1,4 +1,6 @@
-Athor: Lionis Emmanouil Georgios (Akis)
+Author: Lionis Emmanouil Georgios (Akis)
+
+In this project there were some restrictions. Those were that I could not use libriaries of c++ such us vector,array,list. The only libriary I was alowed was the string labriary. And I was not allowed to use Inheritance.
 
 Summery of the program:
   This program tries to make a school environment and then tries to move the students from out of the school into the classes that they belong to if the teacher of its class has not gone into the class.

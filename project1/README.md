@@ -1,5 +1,4 @@
-A.M.: (111520) 1900103
-Athor: Lionis Emmanouil Georgios
+Athor: Lionis Emmanouil Georgios (Akis)
 
 Summery of the program:
   This program tries to make a school environment and then tries to move the students from out of the school into the classes that they belong to if the teacher of its class has not gone into the class.

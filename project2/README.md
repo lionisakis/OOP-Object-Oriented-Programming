@@ -1,5 +1,6 @@
-A.M.: (111520) 1900103
-Athor: Lionis Emmanouil Georgios
+Author: Lionis Emmanouil Georgios (Akis)
+
+In this project there were some restrictions. Those were that I could not use libriaries of c++ such us vector,array,list. The only libriary I was alowed was the string labriary. And I was not allowed to use Inheritance.
 
 Summary of the program:
   This program tries to make pairs of Students that are in a kindergarten by trying to make pairs of the opposite sex. Also, those students can create a mess and the program has to change their pairs.

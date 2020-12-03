@@ -35,7 +35,7 @@ void Student::setMessy(bool newMessy){
 // print the student
 void Student::print() const{
     std::cout<<"Student Name: "<<name<<std::endl;
-    std::cout<<"Student Sex: "<<sex<<std::endl;
+    std::cout<<"Student Sex: "<<sex<<" Class: "<<theClass<<std::endl;
     std::cout<<"Is mess:"<<messy<<std::endl;
 }
 

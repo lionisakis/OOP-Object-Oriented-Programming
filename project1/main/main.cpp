@@ -220,6 +220,7 @@ int main(int argc,char* argv[]){
 
             
         }
+
         // move teacher
         else{
             Teacher* temp=takeRandomTeacher(teachers,&teachersNotIn);

@@ -278,6 +278,7 @@ Pair* Kindergarden::findPair(Student* student){
 // Find a student to replace the naughty
 void Kindergarden::replaceStudent(int theClass,int naughtyClass,Student* naughty){
     // search for infinite
+    int k=0;
     while(true){
         // take a randomStudent
         int randomStudent=(int)size[theClass]*((double)rand()/((double)RAND_MAX));
@@ -285,17 +286,22 @@ void Kindergarden::replaceStudent(int theClass,int naughtyClass,Student* naughty
         // if the student is the same with the naughty then we dont want it
         if(student==naughty)
             continue;
-
+	//if(k>20){
+          //  std::cout<<"There is no student avalaible to change\n";
+           // return ;
+        //}
+        k++;
         // if the student has a the same sex then it is the student that we want 
         if(student->getSex()==naughty->getSex()&&naughty!=student){
             // find each Pair
             Pair* Pair1=findPair(naughty);
             Pair* Pair2=findPair(student);
             
-            std::cout<<"\nNaughty kid:\n";
+            std::cout<<"\nThe naughty kid:\n";
             naughty->print();
             std::cout<<"Changes with the kid:\n";
             student->print();
+	    std::cout<<"\n";
 
             std::cout<<"The Pairs which are being changed are:\n";
             Pair1->print();
@@ -346,7 +352,7 @@ void Kindergarden::changeNaughtyStudents(){
     std::cout<<"Naughty kids:\n";
     for(int i=0;i<naughtySize;i++)
         naughty[i]->print();
-
+    std::cout<<"\n";
     for(int i=0;i<naughtySize;i++){
 
         Pair* current=findPair(naughty[i]);
@@ -457,24 +463,20 @@ void Kindergarden::changeNaughtyStudents(){
             else {
                 // the Pair was naughty alone
                 
-                // find a random class that has a Pair in it
-                int randomClass;
+                // find a the next class which has a sequence 
+                int nextClass=j;
                 do{
-                    randomClass=(int)(classes*((double)rand()/((double)RAND_MAX)));
-                }while(randomClass!=j&&randomClass<classes&&list[randomClass][0]!=NULL);
+                   nextClass++;
+                   if(nextClass>=classes)
+                       nextClass=0;
+	        }while(list[nextClass][0]==NULL);
 
                 // replayce the first naughty
-                replaceStudent(randomClass,j,naughty[i]);
-                
-                // find a new random class
-                int prev= randomClass;
-                do{
-                    randomClass=(int)(classes*((double)rand()/((double)RAND_MAX)));
-                }while(randomClass!=j&&randomClass!=prev&&randomClass<classes);
-                
+                replaceStudent(nextClass,j,naughty[i]);
+                                
                 // replace the following naughty which is 
                 // the second student of Pair
-                replaceStudent(randomClass,j,naughty[i+1]);
+                replaceStudent(nextClass,j,naughty[i+1]);
 
                 // we have seen 2 naughty not 1 so i must go up by 2
                 i++;
@@ -495,11 +497,12 @@ void Kindergarden::createMess(int times){
     for(int i=0;i<times;i++){
         int whichStudent;
         int whichClass;
-        do{
+        //do{
             whichClass=(int)classes*((double)rand()/((double)RAND_MAX));
-            whichStudent=(int)size[i]*((double)rand()/((double)RAND_MAX));
-        }while (students[whichClass][whichStudent]->getMessy());
-        students[whichClass][whichStudent]->setMessy(true);
+            whichStudent=(int)size[whichClass]*((double)rand()/((double)RAND_MAX));
+        //}while (students[whichClass][whichStudent]->getMessy());
+        //students[whichClass][whichStudent]->setMessy(true);
+        students[0][i]->setMessy(true);
     }
 
     // change the naughty Students

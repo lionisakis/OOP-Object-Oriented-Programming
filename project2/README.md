@@ -16,7 +16,7 @@ Author: Lionis Emmanouil Georgios (Akis)
 
 ### How to compile  the programm:
    first you have to go to the main folder by typing `$ cd main`
-   then you have to run the following command  `$ g++ -o run main.cpp ../modules/kindergarden.cpp ../modules/pair.cpp ../modules/student.cpp    `
+   then you have to run the following command  `$ g++ main.cpp ../modules/kindergarden.cpp ../modules/pair.cpp ../modules/student.cpp    `
    The final step is to run the executable program with the following arguments: `$ /a.out  K L Tquiet Tmessy`
    K: a number in which it says how many classes there are (in my main, the number of the students, that are being created, is based on this number(k) * the define number of each student in a class)
    L:  a number that shows how many random students create a mess.

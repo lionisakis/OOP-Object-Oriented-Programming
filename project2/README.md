@@ -2,6 +2,8 @@ Author: Lionis Emmanouil Georgios (Akis)
 
 **In this project there were some restrictions. Those were that I could not use libriaries of c++ such us vector,array,list. The only libriary I was alowed was the string labriary. And I was not allowed to use Inheritance.**
 
+**There is a problem with Valgrind that sometimes does not work properly (it does not use "delete " in a "new" variable that it makes). It is not a problem with my code but it is a problem with the library Valgrind itself. It does not occur in all the computers but with those that have an old version of Valgrind. The issue that Valgrind itself told is at https://www.valgrind.org/docs/manual/faq.html#faq.reports  in the 4.1 section.**
+
 ### Summary of the program: 
 
   This program tries to make pairs of Students that are in a kindergarten by trying to make pairs of the opposite sex. Also, those students can create a mess and the program has to change their pairs.

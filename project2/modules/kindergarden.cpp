@@ -497,12 +497,11 @@ void Kindergarden::createMess(int times){
     for(int i=0;i<times;i++){
         int whichStudent;
         int whichClass;
-        //do{
+        do{
             whichClass=(int)classes*((double)rand()/((double)RAND_MAX));
             whichStudent=(int)size[whichClass]*((double)rand()/((double)RAND_MAX));
-        //}while (students[whichClass][whichStudent]->getMessy());
-        //students[whichClass][whichStudent]->setMessy(true);
-        students[0][i]->setMessy(true);
+        }while (students[whichClass][whichStudent]->getMessy());
+        students[whichClass][whichStudent]->setMessy(true);
     }
 
     // change the naughty Students

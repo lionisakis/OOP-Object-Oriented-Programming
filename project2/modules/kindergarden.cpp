@@ -371,7 +371,7 @@ void Kindergarden::changeNaughtyStudents(){
         }
         // all the Pair is naughty
         else{
-            // fidnd the next Pair
+            // find the next Pair
             Pair* next;
             bool tempFlage=false;
 
@@ -421,41 +421,30 @@ void Kindergarden::changeNaughtyStudents(){
                 // whichClass
                 // They might have all left (this is in case
                 // if the students are only 1)
-                while(list[whichClass][0]==NULL) 
-                    if(whichClass>=classes)
+                do{
+                    if(whichClass>=classes-1)
                         whichClass=0;
                     else
                         whichClass++;
-
+		}while (list[whichClass][0]==NULL); 
                 // replayce the first naughty
                 replaceStudent(whichClass,j,naughty[i]);
                 
-                // find the next class to replace the following naughty
-                if(whichClass>=classes-1)
-                    whichClass=0;
-                else 
-                    whichClass++;
-
                 // check if there a sequence at the class 
                 // whichClass
                 // They might have all left (this is in case
                 // if the students are only 1)
-                while(list[whichClass][0]==NULL) 
-                    if(whichClass>=classes)
+                do{
+                    if(whichClass>=classes-1)
                         whichClass=0;
                     else
                         whichClass++;
+		}while (list[whichClass][0]==NULL);
 
                 // replace the following naughty which is 
                 // the second student of Pair
                 replaceStudent(whichClass,j,naughty[i+1]);
                 
-                // find the next class to replace the following naughty
-                if(whichClass>=classes-1)
-                    whichClass=0;
-                else 
-                    whichClass++;              
-
 
                 // we have seen 2 naughty not 1 so i must go up by 2
                 i++;

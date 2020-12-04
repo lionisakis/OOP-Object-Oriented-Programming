@@ -1,8 +1,7 @@
+A.M.: (111520) 1900103
 Author: Lionis Emmanouil Georgios (Akis)
 
-**In this project there were some restrictions. Those were that I could not use libriaries of c++ such us vector,array,list. The only libriary I was alowed was the string labriary. And I was not allowed to use Inheritance.**
-
-**There is a problem with Valgrind that sometimes does not work properly (it does not use "delete " in a "new" variable that it makes). It is not a problem with my code but it is a problem with the library Valgrind itself. It does not occur in all the computers but with those that have an old version of Valgrind. The issue that Valgrind itself told is at https://www.valgrind.org/docs/manual/faq.html#faq.reports  in the 4.1 section.**
+**There is a problem with Valgrind that sometimes does not work properly (it does not use "free" at space that its itself creates). It is not a problem with my code but it is a problem with the library Valgrind itself. It does not occur in all the computers but with those that have an old version of Valgrind. The issue that Valgrind itself told is at https://www.valgrind.org/docs/manual/faq.html#faq.reports  in the 4.1 section.**
 
 ### Summery of the program:
   This program tries to make a school environment and then tries to move the students from out of the school into the classes that they belong to if the teacher of its class has not gone into the class.
@@ -16,11 +15,13 @@ Author: Lionis Emmanouil Georgios (Akis)
 ### How to compile  the programm:
   first you have to go to the main folder by typing `$ cd main`
   then you have to run the following command `$ g++ main.cpp ../modules/corridor.cpp ../modules/floor.cpp  ../modules/school.cpp ../modules/stair.cpp ../modules/student.cpp ../modules/teacher.cpp ../modules/theClass.cpp ../modules/yard.cpp` 
-  The final step is to run the executable program with the following arguments: `$ /a.out  Cclass  Cyard  Cstair Ccorr`
+  The final step is to run the executable program with the following arguments: `$ /a.out  Cclass  Cyard  Cstair Ccorr <names.txt`
+  
   Cclass: a number in which it says how many students can be hold in a class (in my main, the number of the students, that are being created, is based on this number)
   Cyard:  a number in which it says how many students can be hold in a yard
   Cstair: a number in which it says how many students can be hold in the stairs
   Ccorr:  a number in which it says how many students can be hold in the corridors
+  (the <names.txt is not necessary but then the program will ask you for names)
 
 ### Description of the main :
   In the main, at first, I create the School and the students and the teachers. The number of students is based on the first argument (Cclass). The number of teachers is based on how many classes there are. There are numerous ways to move a student. I used the wave system. The wave system is that in each room the number of random students that can be entered is based on how much room is available. For example, if the yard has room for 10 people then 10 random students that have not been in the School complex enter the yard (and so they enter the school complex). The wave first moves students at first from the corridor->classes then stairs->corridor then yard->stairs and last out of school->yard. The teachers move to their Classes automatically and they don't have to go through all that process. This process goes on until either all students or teachers have entered their classes. Which group (teachers, students) moves is based on Chance (the chance for a teacher to move is small so that the students can go to their classes). 
@@ -37,7 +38,7 @@ Author: Lionis Emmanouil Georgios (Akis)
   The class Teacher represents a teacher with a name and a class. He has a constructor and a deconstructor for "creating" and "deleting" the teacher. The teacher has also the basic get functions for the Name, The class in which he belongs. The teacher has also a set function to set the teacher that has entered the Class.
 
   #### School:
-  The class School represents a School complex. He has a constructor and a deconstructor for "creating" and "deleting" the school. In the constructor, the school complex classes is being constructed (yard, stairs, floors, corridors, classes).In the deconstructor, the school complex classes is also being deconstructed. There are get functions so the programmer can get each schoolroom alone (for the yard, stairs, floors, corridors, classes). Also, there is a function in which a student enters the school (by seeing if the yard has room for a student or not. If there is room then the students enter the yard automatically). Finally, the school has the ability to print all of the school complex (prints the yard, stairs, floors, corridors, classes).
+  The class School represents a School complex. He has a constructor and a deconstructor for "creating" and "deleting" the school. In the constructor, the school complex classes is being constructed (yard, stairs, floors, corridors, classes). How many floors are being defined at the school.cpp file.In the deconstructor, the school complex classes is also being deconstructed. There are get functions so the programmer can get each schoolroom alone (for the yard, stairs, floors, corridors, classes). Also, there is a function in which a student enters the school (by seeing if the yard has room for a student or not. If there is room then the students enter the yard automatically). Finally, the school has the ability to print all of the school complex (prints the yard, stairs, floors, corridors, classes).
 
   #### Yard (schoolyard):
   The class Yard represents a schoolyard. It has a constructor and a deconstructor for "creating" and "deleting" the yard. The functions of this class are to: put a student into the yard (in the main I do not use this function but the schoolEnters function), remove a student from the yard, print the students that are in the yard, return if there is room in the yard.

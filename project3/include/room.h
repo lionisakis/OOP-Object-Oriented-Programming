@@ -8,7 +8,7 @@ class Room {
         const int max;
         std::vector<Student*> students;
     public:
-        explicit Room(int);
+        Room(int);
         virtual void enter(Student*);
         virtual void print() const;
         Student* getStudent(int index=0)const;

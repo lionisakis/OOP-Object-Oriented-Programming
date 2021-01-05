@@ -72,7 +72,6 @@ public class Room {
             System.out.println(studentName+" exits School!");   
         }
         return student;
-        
     }
     public Student exit(){
         if (0==students.size()){

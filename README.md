@@ -2,6 +2,8 @@
 
 ## This repository has many projects that are based on Object-Oriented-Programming ##
 
+## Solo Projects ##
+
 ### Project 1 \ School Enter ###
 - - - -
 
@@ -24,6 +26,8 @@
 - - - -
  This program tries to make a school environment and then moves the students and the teachers from out of the school into the classes that they belong to and works the school for N hours with same Fatige that the users gives and then exits all students from their classes. Language: Java
 
-### Teamwork Project \ Role Playing ### 
+## Teamwork Projects ##
+
+### Project1 \ Role Playing ### 
 - - - -
  This program tries to make role playing Game. More information to the project with the link: https://github.com/lionisakis/Project Language: c++ Teamwork Project Authors: me, @mariask 

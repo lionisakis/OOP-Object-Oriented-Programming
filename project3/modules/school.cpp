@@ -56,6 +56,7 @@ void School::print() const{
 }
 
 void School::enter(Student* student) {
+    std::cout<<student->getName()<<" enters school\n";
     yard->enter(student);
 }
 

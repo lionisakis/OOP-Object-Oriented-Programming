@@ -2,7 +2,7 @@ IDIR =$(dir $(lastword $(MAKEFILE_LIST)))include
 MDIR =$(dir $(lastword $(MAKEFILE_LIST)))modules/
 
 CXX=g++
-CXXFLAGS= -g -Wall -MMD -I$(IDIR)
+CXXFLAGS= -g -MMD -I$(IDIR)
 
 LIBS=-lm
 

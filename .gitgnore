@@ -1,0 +1,13 @@
+*
+!*/
+
+!*.cc
+!*.java
+!*.h
+!*.mk
+!*.jpg
+!*.png
+!Makefile
+!.gitignore
+!README.md
+!.vscode/*.json

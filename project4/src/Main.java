@@ -10,23 +10,18 @@ import People.Teacher;
 public class Main {
     public static void main(String[] args) {
         
-        // if (args.length!=5){
-        //     System.out.println("Not the right arguments.");
-        //     System.out.println("Arguments needed:");
-        //     System.out.println("./file Cclass Lj Ls Lt N");
-        //     return ;
-        // }
+         if (args.length!=5){
+             System.out.println("Not the right arguments.");
+             System.out.println("Arguments needed:");
+             System.out.println("./file Cclass Lj Ls Lt N");
+             return ;
+         }
             
-        // int poepleInClass=Integer.parseInt(args[0]);
-        // int fatigeJ=Integer.parseInt(args[1]);
-        // int fatigeS=Integer.parseInt(args[2]);
-        // int fatigeT=Integer.parseInt(args[3]);
-        // int hours=Integer.parseInt(args[4]); 
-        int poepleInClass=Integer.parseInt("1");
-        int fatigeJ=Integer.parseInt("5");
-        int fatigeS=Integer.parseInt("10");
-        int fatigeT=Integer.parseInt("15");
-        int hours=Integer.parseInt("20"); 
+        int poepleInClass=Integer.parseInt(args[0]);
+        int fatigeJ=Integer.parseInt(args[1]);
+        int fatigeS=Integer.parseInt(args[2]);
+        int fatigeT=Integer.parseInt(args[3]);
+        int hours=Integer.parseInt(args[4]); 
         School school= new School(poepleInClass);
         System.out.println("");
         Scanner Scann = new Scanner(System.in);
@@ -116,15 +111,15 @@ public class Main {
             }
         }
     
-        // System.out.println("");
-        // school.operate(hours);
-        // school.print(); 
+        System.out.println("");
+        school.operate(hours);
+        school.print(); 
         System.out.println("");
         school.empty();
-        // System.out.println("");
-        // school.print();
+        System.out.println("");
+        school.print();
 
-        // System.out.println("");
+        System.out.println("");
     
     }
 }

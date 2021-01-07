@@ -48,15 +48,16 @@ public class School {
     public void empty(){
         for (int i=0;i<3;i++){
             for(int j=0;j<6;j++){
-                Student student=null;
-                while((student=floors.get(i).getClass(j).exit())!=null){
+                Student student=floors.get(i).getClass(j).exit();
+                while(student!=null){
                     floors.get(i).getCorridor().enter(student,false);
                     floors.get(i).getCorridor().exit(student,false);
                     stair.enter(student,false);
                     stair.exit(student,false);
                     yard.enter(student,false);
                     yard.exit(student,false);                    
-                }
+                    student=floors.get(i).getClass(j).exit();
+		}
                 floors.get(i).getClass(j).exitTeacher();
             }
         }

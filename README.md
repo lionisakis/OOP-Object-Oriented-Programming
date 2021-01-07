@@ -24,7 +24,7 @@
 
 ### Project 4 \ School Enter-Operate-Exit ### 
 - - - -
- This program tries to make a school environment and then moves the students and the teachers from out of the school into the classes that they belong to and works the school for N hours with same Fatige that the users gives and then exits all students from their classes. Language: Java
+ This program tries to make a school environment. The programm moves the students and the teachers from out of the school into the classes that they belong to. Later, it works the school for N hours with a number (Fatige) that the user gives. At the end it exits all the students and the teachers from their classes out of the school complex. Language: Java
 
 ## Teamwork Projects ##
 

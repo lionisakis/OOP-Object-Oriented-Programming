@@ -62,5 +62,5 @@ The class Person represents a Person with a name and a class and a fatige. He ha
   #### Corridor:
   The class Corridor represents a corridor and is a subclass of the class Room. It has a constructor and a deconstructor for "creating" and "deleting" the corridor. The functions of this class are to: put a student into the corridor which enters the student to the vector of Students of the super class Room and prints that a Student has enterd the Corridor, remove a student from the Corridor by entering a Null Student to the super class Room (that way it pop the last Student), print which prints "Corridor" and then calls print form the print from the super class Room.
 
-  #### theClass:
-  The class theClass represents classes and is a subclass of the class Room. It has a constructor and a deconstructor for "creating" and "deleting" the classes. The functions of this class are to: get the floor number and the class number, set who is the teacher, put a student into the class by using the super class, operate for N hours the class, print the students and the teacher that are in the classes.
+  #### TheClass:
+  The class TheClass represents classes and is a subclass of the class Room. It has a constructor and a deconstructor for "creating" and "deleting" the classes. The functions of this class are to: get the floor number and the class number, set who is the teacher, put a student into the class by using the super class, operate for N hours the class, print the students and the teacher that are in the classes.

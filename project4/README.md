@@ -1,7 +1,4 @@
 
-
-java Main
-
 Author: Lionis Emmanouil Georgios (Akis)
 
 ### Summery of the program:

@@ -20,6 +20,7 @@ void Yard::enter(Student* student){
 
 Student* Yard::exit(){
     Student* student=Room::getStudent(0);
+    // by giving Null i exit a student from the Room
     Room::enter(NULL);
     student->printExit("schoolyard");
     return student;
